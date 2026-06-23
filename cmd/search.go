@@ -3,9 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/albuilov/go-bmsearch/internal"
-	"github.com/albuilov/go-bmsearch/internal/naive"
 	"github.com/spf13/cobra"
+
+	"github.com/albuilov/go-bmsearch/internal"
+	"github.com/albuilov/go-bmsearch/internal/horspool"
+	"github.com/albuilov/go-bmsearch/internal/naive"
 )
 
 // Фдаги команд search.
@@ -65,6 +67,8 @@ func newSearcher(algo string) (internal.Searcher, error) {
 	switch algo {
 	case algoNaive:
 		return naive.New(), nil
+	case algoHorspool:
+		return horspool.New(), nil
 	default:
 		return nil, fmt.Errorf("неизвестный алгоритм: %q", algo)
 	}
