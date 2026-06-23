@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/albuilov/go-bmsearch/internal/bm"
 	"github.com/spf13/cobra"
 
 	"github.com/albuilov/go-bmsearch/internal"
@@ -69,6 +70,8 @@ func newSearcher(algo string) (internal.Searcher, error) {
 		return naive.New(), nil
 	case algoHorspool:
 		return horspool.New(), nil
+	case algoBM:
+		return bm.New(), nil
 	default:
 		return nil, fmt.Errorf("неизвестный алгоритм: %q", algo)
 	}
