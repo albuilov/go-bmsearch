@@ -44,3 +44,9 @@ search-horspool: build ## Пример: поиск алгоритмом Horspool
 
 search-bm: build ## Пример: поиск полным Boyer-Moore
 	./$(BIN_DIR)/$(BINARY) search -p "abc" -t "abcXabcYabc" -a bm
+
+bench-compare: ## Сохранить результаты бенчмарков в bench.txt
+	go test -bench=. -benchmem -count=5 ./bench/... | tee bench.txt
+
+bench-stat: ## Показать сводную статистику (требует benchstat)
+	benchstat bench.txt

@@ -1,0 +1,57 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/albuilov/go-bmsearch/bench
+cpu: Apple M5
+BenchmarkSearch/ShortText_ShortPattern/Naive-10         	42732537	        27.74 ns/op	1549.97 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Naive-10         	43545576	        27.83 ns/op	1544.98 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Naive-10         	43018268	        27.90 ns/op	1541.18 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Naive-10         	43374342	        27.88 ns/op	1542.41 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Naive-10         	43008118	        27.93 ns/op	1539.69 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Horspool-10      	 9594895	       123.6 ns/op	 347.94 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Horspool-10      	 9772842	       122.8 ns/op	 350.06 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Horspool-10      	 9712002	       122.7 ns/op	 350.34 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Horspool-10      	 9693267	       122.4 ns/op	 351.41 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/Horspool-10      	 9753357	       122.6 ns/op	 350.62 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/BM-10            	 9091333	       132.0 ns/op	 325.66 MB/s	      40 B/op	       2 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/BM-10            	 9098640	       131.8 ns/op	 326.34 MB/s	      40 B/op	       2 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/BM-10            	 9079176	       131.8 ns/op	 326.35 MB/s	      40 B/op	       2 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/BM-10            	 9097016	       132.4 ns/op	 324.83 MB/s	      40 B/op	       2 allocs/op
+BenchmarkSearch/ShortText_ShortPattern/BM-10            	 9055700	       132.6 ns/op	 324.36 MB/s	      40 B/op	       2 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Naive-10          	  130036	      9091 ns/op	1100.02 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Naive-10          	  131728	      9142 ns/op	1093.89 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Naive-10          	  130851	      9119 ns/op	1096.57 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Naive-10          	  131240	      9092 ns/op	1099.91 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Naive-10          	  130636	      9112 ns/op	1097.47 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Horspool-10       	  167254	      7088 ns/op	1410.83 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Horspool-10       	  165721	      7126 ns/op	1403.22 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Horspool-10       	  165584	      7085 ns/op	1411.50 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Horspool-10       	  166118	      7123 ns/op	1403.86 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/Horspool-10       	  169347	      7106 ns/op	1407.28 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_ShortPattern/BM-10             	  193492	      6180 ns/op	1618.18 MB/s	   25184 B/op	      10 allocs/op
+BenchmarkSearch/LongText_ShortPattern/BM-10             	  190418	      6256 ns/op	1598.50 MB/s	   25184 B/op	      10 allocs/op
+BenchmarkSearch/LongText_ShortPattern/BM-10             	  190465	      6311 ns/op	1584.57 MB/s	   25184 B/op	      10 allocs/op
+BenchmarkSearch/LongText_ShortPattern/BM-10             	  189792	      6273 ns/op	1594.19 MB/s	   25184 B/op	      10 allocs/op
+BenchmarkSearch/LongText_ShortPattern/BM-10             	  190213	      6276 ns/op	1593.45 MB/s	   25184 B/op	      10 allocs/op
+BenchmarkSearch/LongText_LongPattern/Naive-10           	  108850	     11020 ns/op	 907.41 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Naive-10           	  108160	     11030 ns/op	 906.65 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Naive-10           	  107935	     11055 ns/op	 904.53 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Naive-10           	  108364	     10929 ns/op	 915.03 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Naive-10           	  107341	     11025 ns/op	 907.02 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Horspool-10        	  241285	      4923 ns/op	2031.41 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Horspool-10        	  235380	      5177 ns/op	1931.61 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Horspool-10        	  238888	      4978 ns/op	2008.84 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Horspool-10        	  238646	      4949 ns/op	2020.49 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/Horspool-10        	  240417	      4960 ns/op	2015.99 MB/s	   25152 B/op	       9 allocs/op
+BenchmarkSearch/LongText_LongPattern/BM-10              	  228930	      5134 ns/op	1947.79 MB/s	   25344 B/op	      11 allocs/op
+BenchmarkSearch/LongText_LongPattern/BM-10              	  230702	      5142 ns/op	1944.94 MB/s	   25344 B/op	      11 allocs/op
+BenchmarkSearch/LongText_LongPattern/BM-10              	  243226	      4949 ns/op	2020.45 MB/s	   25344 B/op	      11 allocs/op
+BenchmarkSearch/LongText_LongPattern/BM-10              	  241747	      4945 ns/op	2022.08 MB/s	   25344 B/op	      11 allocs/op
+BenchmarkSearch/LongText_LongPattern/BM-10              	  242022	      4937 ns/op	2025.72 MB/s	   25344 B/op	      11 allocs/op
+BenchmarkSearch/WorstCaseNaive/Naive-10                 	    6806	    172727 ns/op	  57.90 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/WorstCaseNaive/Naive-10                 	    6974	    172698 ns/op	  57.91 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/WorstCaseNaive/Naive-10                 	    6909	    172939 ns/op	  57.83 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/WorstCaseNaive/Naive-10                 	    6930	    172684 ns/op	  57.91 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/WorstCaseNaive/Naive-10                 	    6994	    172418 ns/op	  58.00 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/WorstCaseNaive/Horspool-10              	  142670	      8179 ns/op	1222.74 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/WorstCaseNaive/Horspool-10              	  150146	      8279 ns/op	1207.99 MB/s	       8 B/op	       1 allocs/op
+BenchmarkSearch/WorstCaseNaive/Horspool-10              	
