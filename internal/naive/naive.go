@@ -12,5 +12,24 @@ func New() *Searcher {
 // Сравнение выполняется побайтово слева направо.
 // Возвращает nil если вхождений не найдено.
 func (s *Searcher) Search(text, pattern []byte) []int {
-	return nil
+	t := len(text)
+	p := len(pattern)
+
+	if p == 0 || p > t {
+		return nil
+	}
+
+	var indices []int
+
+	for i := 0; i <= t-p; i++ {
+		j := 0
+		for j < p && text[i+j] == pattern[j] {
+			j++
+		}
+		if j == p {
+			indices = append(indices, i)
+		}
+	}
+
+	return indices
 }
