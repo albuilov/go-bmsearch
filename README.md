@@ -1,2 +1,6 @@
 # go-bmsearch
-Boyer-Moore string search algorithm implemented in Go
+
+Реализация алгоритма поиска подстроки Boyer-Moore на Go.
+
+Проект охватывает путь от наивного O(n·m) поиска до полного алгоритма BM
+с правилами Bad Character и Good Suffix, а также сравнительные бенчмарки.
