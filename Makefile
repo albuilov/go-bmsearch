@@ -2,13 +2,13 @@
 
 BINARY := bmsearch
 BIN_DIR := bin
-CMD_DIR := ./cmd/bmsearch
+CMD_DIR := ./cmd
 
 help: ## Показать список доступных команд
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
-build: ## Собрать бинарник в ./bin/bmsearch
+build: ## Собрать бинарник в ./bin
 	@mkdir -p $(BIN_DIR)
 	go build -o $(BIN_DIR)/$(BINARY) $(CMD_DIR)
 
