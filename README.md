@@ -19,17 +19,21 @@
 
 ```
 go-bmsearch/
-├── cmd/bmsearch/      # CLI на основе spf13/cobra
+├── cmd/bmsearch/              # CLI на основе spf13/cobra
 ├── internal/
-│   ├── naive/         # наивная реализация O(n·m)
-│   ├── horspool/      # Boyer-Moore-Horspool
-│   └── bm/            # полный Boyer-Moore
-├── bench/             # сравнительные бенчмарки
-└── Makefile           # команды для сборки, тестов и бенчмарков
+│   ├── search.go              # интерфейс Searcher
+│   ├── naive/                 # наивная реализация O(n·m)
+│   ├── horspool/              # Boyer-Moore-Horspool
+│   ├── bm/                    # полный Boyer-Moore
+│   └── searchtesting/         # общие тест-кейсы для всех реализаций
+├── bench/                     # сравнительные бенчмарки
+└── Makefile                   # команды для сборки, тестов и бенчмарков
 ```
 
 Все алгоритмы реализуют общий интерфейс `internal.Searcher`, что упрощает
-их взаимозаменяемость и единообразное тестирование.
+их взаимозаменяемость. Тест-кейсы вынесены в `internal/searchtesting` —
+каждый алгоритмовый пакет прогоняет один и тот же набор сценариев через
+`searchtesting.Run(t, New())`.
 
 ## Установка
 
@@ -77,8 +81,6 @@ worst case для наивного алгоритма (`aaa...ab` × `aaa...ab`)
 
 ## Ссылки
 
-- Boyer R.S., Moore J.S. — *A Fast String Searching Algorithm* (1977)
-- Crochemore M., Rytter W. — *Jewels of Stringology*
 - [wikipedia: Boyer-Moore](https://ru.wikipedia.org/wiki/Алгоритм_Бойера_—_Мура)
 - [habr.com: Строковые алгоритмы на практике. Часть 2 — Алгоритм Бойера — Мура](https://habr.com/ru/articles/660767/)
 

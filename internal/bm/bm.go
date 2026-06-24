@@ -1,5 +1,8 @@
+// Package bm реализует полный алгоритм Boyer-Moore с правилами
+// Bad Character и Good Suffix, обеспечивающий сублинейный поиск в среднем случае.
 package bm
 
+// alphabetSize задаёт размер таблицы для всех возможных значений байта.
 const alphabetSize = 256
 
 // Searcher реализует полный алгоритм Boyer-Moore

@@ -3,15 +3,15 @@ package main
 import (
 	"fmt"
 
-	"github.com/albuilov/go-bmsearch/internal/bm"
 	"github.com/spf13/cobra"
 
 	"github.com/albuilov/go-bmsearch/internal"
+	"github.com/albuilov/go-bmsearch/internal/bm"
 	"github.com/albuilov/go-bmsearch/internal/horspool"
 	"github.com/albuilov/go-bmsearch/internal/naive"
 )
 
-// Фдаги команд search.
+// Флаги команды search.
 var (
 	flagPattern string
 	flagText    string
@@ -39,8 +39,8 @@ func init() {
 	searchCmd.Flags().StringVarP(&flagAlgo, "algo", "a", algoNaive,
 		fmt.Sprintf("алгоритм поиска: %s | %s | %s", algoNaive, algoHorspool, algoBM))
 
-	_ = searchCmd.MarkFlagRequired("pattern")
-	_ = searchCmd.MarkFlagRequired("text")
+	searchCmd.MarkFlagRequired("pattern") //nolint:errcheck
+	searchCmd.MarkFlagRequired("text")    //nolint:errcheck
 
 	rootCmd.AddCommand(searchCmd)
 }

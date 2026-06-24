@@ -1,3 +1,4 @@
+// Package main содержит точку входа CLI-инструмента bmsearch.
 package main
 
 import (
