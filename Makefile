@@ -2,7 +2,7 @@
 
 BINARY := bmsearch
 BIN_DIR := bin
-CMD_DIR := ./cmd
+CMD_DIR := ./cmd/bmsearch
 
 help: ## Показать список доступных команд
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
